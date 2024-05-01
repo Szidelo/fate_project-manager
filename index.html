@@ -4,72 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<title>Task manager</title>
 	</head>
 	<body>
 		<main class="projects__main-container">
-			<header class="projects__header">
-                <div class="logo-wrapper">
-                    <img src="./assets/img/fatelabz 1.png" alt="">
-                </div>
-                <div>
-                    <ul class="navigation-list">
-                        <li>
-                            <a href="">
-                                <img class="projects__content-img" src="./assets/img/quilt.png" alt="">
-                                <p class="font-xl font-normal">overview</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="projects__content-img" src="./assets/img/projects.png" alt="">
-                                <p class="font-xl font-normal">projects</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="projects__content-img" src="./assets/img/quilt.png" alt="">
-                                <p class="font-xl font-normal">members</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="projects__content-img" src="./assets/img/quilt.png" alt="">
-                                <p class="font-xl font-normal">resources</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="projects__content-buttons">
-                    <a href="">
-                        <img class="projects__content-img" src="./assets/img/logout.png" alt="">
-                        <p>logout</p>
-                    </a>
-                </div>
-            </header>
-			<div class="projects__content">
-                <div class="projects__content-title">
-                    <div class="title-bar">
-                        <div class="font-xl font-normal capitalize">
-                            <h2>projects</h2>
-                        </div>
-                        <div class="title-bar-user">
-                            <div class="title-bar-user-text">
-                                <h2 class="font-xl capitalize">john doe</h2>
-                                <h3 class="font-lg capitalize text-gray">project manager</h3>
-                            </div>
-                            <div><img src="./assets/img/user.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects__content-main">
-                    <div class="projects__list-container">
-
-                    </div>
-                    <div class="projects__task-container">
-                        
-                    </div>
-                </div>
+            <div id="header">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetch('/public/pages/header.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('header').innerHTML = data;
+                            });
+                    });
+                </script>
+            </div>
+			<div id="page-title" style="width:100%">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetch('/public/pages/page-title.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('page-title').innerHTML = data;
+                            });
+                    });
+                </script>
             </div>
 		</main>
 	</body>
