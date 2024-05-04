@@ -133,7 +133,7 @@ main {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
-	padding: 30px 10px;
+	padding: 32px 10px;
 }
 
 .project__item-btn-wrapper {
@@ -233,7 +233,7 @@ main {
 
 .navigation-list li a {
 	display: flex;
-	margin: 25px 0 0 15px;
+	margin: 40px 0 0 15px;
 	align-items: center;
 	justify-content: flex-start;
 	text-decoration: none;
