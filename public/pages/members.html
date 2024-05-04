@@ -3,68 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./.././../style.css">
     <title>TEam members cards</title>
   </head>
-  <body>
-    <div id="header">
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/public/pages/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                });
-        });
-    </script>
+  <body>  
+    <header class="projects__header-container">
+      <div id="header">
+          <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  fetch('/public/pages/header.html')
+                      .then(response => response.text())
+                      .then(data => {
+                          document.getElementById('header').innerHTML = data;
+                      });
+              });
+          </script>
+      </div>
+<div id="page-title" style="width:100%">
+          <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  fetch('/public/pages/page-title.html')
+                      .then(response => response.text())
+                      .then(data => {
+                          document.getElementById('page-title').innerHTML = data;
+                      });
+              });
+          </script>
+      </div>
+     
+      
+</header>
+
+      <main>
+        <div id="projects__content-main">
+          <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  fetch('/public/pages/projects-content.html')
+                      .then(response => response.text())
+                      .then(data => {
+                          document.getElementById('projects__content-main').innerHTML = data;
+                      });
+              });
+          </script>
+      </div>
+      <!-- this is just to hide the second menu ONLY ON MEMBERS PAGE -->
+        <style>
+          .projects__list-container{
+            display: none;
+          }
+        </style>
+          <script>
+ 
+
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('/public/pages/sections/team-card.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('team-cards-section').innerHTML = data;
+                    });
+            });
+
+        </script>
+      
     </div>
-    <main>
-    <section class="team-card-container">
-      <div class="team-card-time">Time zone <span>+9h</span>  <span>07:30 PM</span></div>
-      <div class="team-card-date">Date <span>30 APR</span> <span>2024 TUE</span></div>
-        <div class="team-card-indetity">
-            <div class="team-card-name">
-                <span>John Doe </span>
-                <span class=""">Project Manager</span> 
-            </div>
-            <div class="team-card-image">
-                <span><img src="./assets/img/male.png"></span>
-            </div>
-        </div>
-      <div class="team-card-projects-tabel">
-        <table class="table table-light">
-                <tr>
-                    <th>Projects</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Project Alpha</td>
-                    <td>Completed</td>
-                </tr>
-                <tr>
-                    <td>Project Beta</td>
-                    <td>In Progress</td>
-                </tr>
-                <tr>
-                    <td>Project Gamma</td>
-                    <td>Planning</td>
-                </tr>
-                <tr>
-                    <td>Project Delta</td>
-                    <td>Delayed</td>
-                </tr>
-                <tr>
-                    <td>Project Epsilon</td>
-                    <td>Under Review</td>
-                </tr>
-        </table>
-      </div>
-      <div class="team-card-add-project">
-        <a>
-            <img src="/assets/img/Plus.png" alt="add project">
-        </a>
-      </div>
-    </section>
+
+ 
 </main>
   </body>
 </html>
