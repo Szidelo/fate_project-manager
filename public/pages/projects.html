@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./.././../style.css" />
+		<title>Projects</title>
+		<script src="./.././../script.js"></script>
+	</head>
+	<body>
+		<header class="projects__header-container">
+			<div id="header">
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						fetch("/public/pages/header.html")
+							.then((response) => response.text())
+							.then((data) => {
+								document.getElementById("header").innerHTML = data;
+							});
+					});
+				</script>
+			</div>
+			<div id="page-title" style="width: 100%">
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						fetch("/public/pages/page-title.html")
+							.then((response) => response.text())
+							.then((data) => {
+								document.getElementById("page-title").innerHTML = data;
+							});
+					});
+				</script>
+			</div>
+		</header>
+
+		<main>
+			<div id="projects__content-main">
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						fetch("/public/pages/projects-content.html")
+							.then((response) => response.text())
+							.then((data) => {
+								document.getElementById("projects__content-main").innerHTML = data;
+							});
+					});
+				</script>
+			</div>
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					fetch("/public/pages/sections/project-list.html")
+						.then((response) => response.text())
+						.then((data) => {
+							document.getElementById("projects-list").innerHTML = data;
+						});
+				});
+				document.addEventListener("DOMContentLoaded", function () {
+					fetch("/public/pages/sections/todo-list.html")
+						.then((response) => response.text())
+						.then((data) => {
+							document.getElementById("todo-section").innerHTML = data;
+						});
+				});
+			</script>
+		</main>
+	</body>
+</html>

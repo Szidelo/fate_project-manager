@@ -1,3 +1,5 @@
+/* GENERAL CSS */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -9,15 +11,18 @@
 
 :root {
 	--bg-black: #030303;
-	--bg-hover: #958282;
 	--bg-gray: #d9d9d9;
-	--text-white: #FFF9F9;
+	--bg-hover: #958282;
+	--bg-hover-light: #d9d9d9;
+	--text-white: #fff9f9;
 	--text-gray: #7c7777;
-    --color-border: #C4C4C4
+	--color-border: #c4c4c4;
+	--color-border-orange: #f3751a;
 }
 
 body {
 	height: 100vh;
+	overflow: hidden;
 }
 
 main {
@@ -25,11 +30,12 @@ main {
 	overflow: hidden;
     left: 280px;
 	height: calc(100vh - 150px);
-
 }
 
+/* UTILITY CSS */
+
 .text-gray {
-    color: var(--text-gray)
+	color: var(--text-gray);
 }
 
 .capitalize {
@@ -42,6 +48,10 @@ main {
 
 .font-sm {
 	font-size: 16px;
+}
+
+.font-sm-md {
+	font-size: 20px;
 }
 
 .font-md {
@@ -57,21 +67,27 @@ main {
 .font-xl {
 	font-size: 32px;
 }
-.font-l{
+
+.font-l {
 	font-size: 30px;
 }
+
 .font-light {
 	font-weight: 300;
 }
+
 .font-normal {
 	font-weight: 400;
 }
+
 .font-medium {
 	font-weight: 500;
 }
+
 .font-semibold {
 	font-weight: 600;
 }
+
 .font-bold {
 	font-weight: 700;
 }
@@ -188,9 +204,9 @@ main {
 .projects__header-container {
 	display: flex;
 	position: relative;
-    height: 150px;
+	height: 150px;
 }
-#projects__content-main{
+#projects__content-main {
 	height: calc(100vh - 150px);
 	overflow: hidden;
 }
@@ -250,7 +266,7 @@ main {
 	justify-content: flex-start;
 	align-items: center;
 	padding-bottom: 20px;
-    padding-left: 25px;
+	padding-left: 25px;
 	font-size: 20px;
 	color: var(--text-white);
 	text-decoration: none;
@@ -260,20 +276,23 @@ main {
 
 .projects__content {
 	width: 100%;
-	/* height: 100vh; */
 }
-#header{
+
+#header {
 	height: 100vh;
 }
+
 .projects__content-title {
 	background-color: var(--bg-gray);
 	height: 150px;
 	width: 100%;
 }
-.title-bar-user-text .font-l{
+
+.title-bar-user-text .font-l {
 	font-weight: 600;
 }
-.title-section-img img{
+
+.title-section-img img {
 	height: 100px;
 	width: 100px;
 	object-fit: contain;
@@ -294,62 +313,64 @@ main {
 }
 
 .title-bar-user:first-child div {
-    margin-right: 50px;
+	margin-right: 50px;
 }
 
 .projects__content-main {
-    display: flex;
-    height: 100%;
-    width: 100%;
+	display: flex;
+	height: 100%;
+	width: 100%;
 }
 
 .projects__list-container {
-    width: 320px;
-    border: 1px solid red;
-    border-radius: 0 20px 20px 0;
+	width: 320px;
+	border: 1px solid var(--color-border);
+	border-radius: 0 20px 20px 0;
 }
 
+.container {
+	display: flex;
+}
 
-.container{
-    display: flex;
+.maine-header {
+	background-color: #030303;
+	width: 280px;
+	height: 100vh;
 }
-.maine-header{
-    background-color: #030303;
-    width: 280px;
-    height: 100vh;
+
+.menu-list {
+	color: white;
 }
-.menu-list{
-    color: white;
-}
+
 .logout-section {
-    color: white;
+	color: white;
 }
-.image-set{
-    margin: 0 0 50px 50px;
-    line-height: 1.5;
-    list-style-type: none;
-        padding: 0;
-      
+
+.image-set {
+	margin: 0 0 50px 50px;
+	line-height: 1.5;
+	list-style-type: none;
+	padding: 0;
 }
-.text-design{
-    display: flex;
-    align-items: center;
-    font-size: 32px;
-    margin-right: 20px;
-    padding: 20px 0px;
+
+.text-design {
+	display: flex;
+	align-items: center;
+	font-size: 32px;
+	margin-right: 20px;
+	padding: 20px 0px;
 }
+
 .nav-img {
-    margin-right: 20px; /* Adjust the value as needed */
+	margin-right: 20px; /* Adjust the value as needed */
 }
+
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0px;
 }
-
-
-    
 
 /* team cards  */
 .projects__task-container{
@@ -397,13 +418,16 @@ main {
 	align-items: center;
 	padding: 50px 0px;
 }
-.team-card-add-project{
-    text-align: end;
+
+.team-card-add-project {
+	text-align: end;
 }
+
 .team-card-projects-tabel {
 	margin: 0 auto;
 }
-.team-card-projects-tabel table{
+
+.team-card-projects-tabel table {
 	width: 355px;
     height: 261px;
 }
@@ -428,3 +452,23 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+table {
+	border-collapse: collapse;
+	text-align: left;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+th,
+td {
+	padding: 8px;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
