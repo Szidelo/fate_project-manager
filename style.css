@@ -235,6 +235,73 @@ main {
 	padding: 0;
 }
 
+/* TODOS */
+
+#todo-section {
+	width: 100%;
+}
+
+.tasks-list {
+	width: 100%;
+	padding: 10px;
+}
+
+.tasks-list > h1 {
+	margin-bottom: 50px;
+}
+
+.tasks-list-grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 20px;
+}
+
+.tasks-list-col {
+	border: 1px solid var(--color-border);
+	border-radius: 30px;
+	padding: 20px 10px;
+}
+
+.task-list-category {
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.overflow {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	height: calc(100vh - 420px);
+	padding: 20px 0;
+}
+
+.task__card {
+	max-width: 396px;
+	max-height: 268px;
+	border: 1px solid var(--color-border);
+	box-shadow: 0 5px 4px rgba(0,0,0,0.5);
+	border-radius: 30px;
+	padding: 15px;
+}
+
+.task__card-header {
+	display: flex;
+	justify-content: space-around;
+}
+
+.task__card-title {
+	margin-bottom: 10px;
+}
+
+.task__card-desciption {
+	margin-bottom: 10px;
+}
+
 .navigation-list li a {
 	display: flex;
 	margin: 40px 0 0 15px;
@@ -375,7 +442,7 @@ main {
 /* team cards  */
 .projects__task-container{
 	padding: 14px 50px;
-	overflow: scroll;
+	/* overflow: scroll; */
 }
 .team-card-container{
     border: 1px solid #C4C4C4;
