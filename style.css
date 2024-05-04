@@ -11,7 +11,7 @@
 	--bg-black: #030303;
 	--bg-hover: #958282;
 	--bg-gray: #d9d9d9;
-	--text-white: #fff9f9;
+	--text-white: #FFF9F9;
 	--text-gray: #7c7777;
     --color-border: #C4C4C4
 }
@@ -54,7 +54,9 @@ main {
 .font-xl {
 	font-size: 32px;
 }
-
+.font-l{
+	font-size: 30px;
+}
 .font-light {
 	font-weight: 300;
 }
@@ -155,6 +157,15 @@ main {
 	height: 150px;
 	width: 100%;
 }
+.title-bar-user-text .font-l{
+	font-weight: 600;
+}
+.title-section-img img{
+	height: 100px;
+	width: 100px;
+	object-fit: contain;
+	padding-left: 30px;
+}
 
 .title-bar {
 	display: flex;
@@ -189,8 +200,8 @@ main {
 
 .team-card-container{
     border: 1px solid #C4C4C4;
-    width: 405px;
-    height: 625px;
+    max-width: 405px;
+    max-height: 625px;
     border-radius: 30px;
     padding: 25px;
     display: flex;
@@ -228,8 +239,14 @@ main {
 .team-card-add-project{
     text-align: end;
 }
+.team-card-projects-tabel {
+	margin: 0 auto;
+}
+.team-card-projects-tabel table{
+	width: 355px;
+    height: 261px;
+}
 table {
-    margin: 20px auto;
     border-collapse: collapse;
     text-align: left;
     font-size: 20px;
