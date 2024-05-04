@@ -175,3 +175,44 @@ main {
     border: 1px solid red;
     border-radius: 0 20px 20px 0;
 }
+
+.container{
+    display: flex;
+}
+.maine-header{
+    background-color: #030303;
+    width: 280px;
+    height: 100vh;
+}
+.menu-list{
+    color: white;
+}
+.logout-section {
+    color: white;
+}
+.image-set{
+    margin: 0 0 50px 50px;
+    line-height: 1.5;
+    list-style-type: none;
+        padding: 0;
+      
+}
+.text-design{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    margin-right: 20px;
+    padding: 20px 0px;
+}
+.nav-img {
+    margin-right: 20px; /* Adjust the value as needed */
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+
+    
