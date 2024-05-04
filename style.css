@@ -22,6 +22,7 @@ body {
 
 main {
 	position: absolute;
+	overflow: hidden;
     left: 280px;
 	height: calc(100vh - 150px);
 
@@ -46,7 +47,9 @@ main {
 .font-md {
 	font-size: 22px;
 }
-
+.font-ls{
+	font-size: 20px;
+}
 .font-lg {
 	font-size: 25px;
 }
@@ -80,6 +83,7 @@ main {
 }
 #projects__content-main{
 	height: calc(100vh - 150px);
+	overflow: hidden;
 }
 .projects__header {
 	background-color: var(--bg-black);
@@ -239,35 +243,40 @@ main {
     
 
 /* team cards  */
-
+.projects__task-container{
+	padding: 14px 50px;
+	overflow: scroll;
+}
 .team-card-container{
     border: 1px solid #C4C4C4;
     max-width: 405px;
     max-height: 625px;
     border-radius: 30px;
-    padding: 25px;
+    padding: 10px;
+	margin: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+#team-cards-section{  
+	 display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+	justify-content: space-around;
 }
 .team-card-date,
 .team-card-time{
     display: flex;
     justify-content: space-around;
-    font-size: 20px;
-    line-height: 120%;;
+    line-height: 120%;
+	padding: 10px 0px;	
 }
 .team-card-name{
     /* height: 125px;  */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: bold;
-}
-.team-card-name  {
-    font-size: 25px;   
-}
+    justify-content: center; */
+} 
 .team-card-add-project img{
     width: 60px;
     height: 60px; 
@@ -275,8 +284,9 @@ main {
 .team-card-indetity{
     display: flex;
     flex-direction: row;
-    
     justify-content: space-between;
+	align-items: center;
+	padding: 50px 0px;
 }
 .team-card-add-project{
     text-align: end;
@@ -288,17 +298,21 @@ main {
 	width: 355px;
     height: 261px;
 }
-table {
+.table {
     border-collapse: collapse;
-    text-align: left;
-    font-size: 20px;
-    font-weight: 500;
+
 }
+
+
 th, td {
+	font-size: 18px;
     padding: 8px;
+	text-align: center;
+	font-weight: 400;
     border: 1px solid #ddd;
 }
 th {
+	font-size: 20px;
     background-color: #f2f2f2;
 }
 tr:nth-child(even) {

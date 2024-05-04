@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./.././../style.css">
     <title>Members</title>
-    <script  src="./.././../script.js"></script>
+
   </head>
   <body>  
     <header class="projects__header-container">
@@ -56,13 +56,22 @@
           <script>
  
 
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('/public/pages/sections/team-card.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('team-cards-section').innerHTML = data;
-                    });
-            });
+ document.addEventListener('DOMContentLoaded', function() {
+    fetch('/public/pages/sections/team-card.html')
+        .then(response => response.text())
+        .then(data => {
+            const container = document.getElementById('team-cards-section');
+            let fragment = document.createDocumentFragment();
+            let tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data;
+
+            for (let i = 0; i < 9; i++) {
+                fragment.appendChild(tempDiv.firstChild.cloneNode(true));
+            }
+
+            container.appendChild(fragment);
+        });
+});
 
         </script>
       
@@ -70,5 +79,6 @@
 
  
 </main>
+<script  src="./.././../script.js"></script>
   </body>
 </html>
