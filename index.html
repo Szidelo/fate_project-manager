@@ -8,7 +8,7 @@
 		<title>Task manager</title>
 	</head>
 	<body>
-		<main class="projects__main-container">
+		<header class="projects__header-container">
             <div id="header">
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
@@ -28,9 +28,29 @@
                             .then(data => {
                                 document.getElementById('page-title').innerHTML = data;
                             });
+   
                     });
                 </script>
             </div>
-		</main>
+           
+            
+		</header>
+        <main>
+            <div id="projects__content-main">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetch('/public/pages/projects-content.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('projects__content-main').innerHTML = data;
+                            });
+                    });
+                </script>
+            </div>
+        </main>
 	</body>
+    <footer>
+        <script src="script.js"></script>
+
+    </footer>
 </html>
