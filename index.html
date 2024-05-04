@@ -45,6 +45,18 @@
                     });
                 </script>
             </div>
+            <div id="overview-container" style="text-align: center">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetch('/public/pages/overview.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('overview-container').innerHTML = data;
+                            });
+                    });
+                </script>
+                
+            </div>
         </main>
 	</body>
     <footer>
