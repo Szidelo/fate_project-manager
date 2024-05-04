@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./.././../style.css" />
-		<title>Members</title>
+		<title>Projects</title>
 		<script src="./.././../script.js"></script>
 	</head>
 	<body>
@@ -45,18 +45,20 @@
 					});
 				</script>
 			</div>
-			<!-- this is just to hide the second menu ONLY ON MEMBERS PAGE -->
-			<style>
-				.projects__list-container {
-					display: none;
-				}
-			</style>
+
 			<script>
 				document.addEventListener("DOMContentLoaded", function () {
-					fetch("/public/pages/sections/team-card.html")
+					fetch("/public/pages/sections/project-list.html")
 						.then((response) => response.text())
 						.then((data) => {
-							document.getElementById("team-cards-section").innerHTML = data;
+							document.getElementById("projects-list").innerHTML = data;
+						});
+				});
+				document.addEventListener("DOMContentLoaded", function () {
+					fetch("/public/pages/sections/todo-list.html")
+						.then((response) => response.text())
+						.then((data) => {
+							document.getElementById("todo-section").innerHTML = data;
 						});
 				});
 			</script>
